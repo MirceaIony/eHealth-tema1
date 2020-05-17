@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PatientService } from 'src/app/services/patient.service';
+import { PatientService } from '../../services/patient.service';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
