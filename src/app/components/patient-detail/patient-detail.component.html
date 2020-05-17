@@ -1,0 +1,41 @@
+<mat-toolbar>
+    <span>Patient details</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="patientService.form" class="normal-form">
+    <mat-grid-list cols="2" rowHeight="300px">
+      <mat-grid-tile>
+        <div class="controles-container">
+            <mat-form-field>
+                <input formControlName="first_name" matInput placeholder="First Name*">
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="last_name" matInput placeholder="Last Name*">
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="email" matInput placeholder="Email">
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName="gender" matInput placeholder="Gender">
+            </mat-form-field>
+        </div>
+      </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="controles-container">
+                <mat-form-field>
+                    <input formControlName="diagnosis_code" matInput placeholder="Diagnosis code">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="diagnosis_description" matInput placeholder="Diagnosis description">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="diagnosis_description_detailed" matInput placeholder="Diagnosis description detailed">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="administered_drug_treatment" matInput placeholder="Administered drug treatment">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>
